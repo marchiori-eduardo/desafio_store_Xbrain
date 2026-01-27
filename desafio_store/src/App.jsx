@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CssBaseline } from '@mui/material'; 
-import ProductList from './pages/productList';
+import ProductList from './pages/ProductList';
 import Checkout from './pages/Checkout';
 import Success from './pages/Success';
 

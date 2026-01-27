@@ -3,22 +3,20 @@ const INITIAL_STATE = {
   total: 0
 };
 
-
-
 export default function cartReducer(state = INITIAL_STATE, action) {
-  
-
   switch (action.type) {
     
     case 'ADD_TO_CART':
-      
       return {
-        ...state, 
-        items: [...state.items, action.payload], 
-        total: state.total + action.payload.price 
+        ...state,
+        items: [...state.items, action.payload],
+        total: state.total + action.payload.price
       };
-
+      
     
+    case 'CLEAR_CART':
+      return INITIAL_STATE; 
+
     default:
       return state;
   }
