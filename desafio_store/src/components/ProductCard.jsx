@@ -1,4 +1,3 @@
-// src/components/ProductCard.jsx
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Card, CardMedia, CardContent, Typography, Button, Box, IconButton } from '@mui/material';
@@ -31,7 +30,8 @@ const ProductCard = ({ product }) => {
       elevation={0}
       sx={{ 
         
-        width: '270px',
+        width: '100%',
+        maxWidth: '270px',
         display: 'flex', 
         flexDirection: 'column',
         position: 'relative',
@@ -40,13 +40,14 @@ const ProductCard = ({ product }) => {
         boxShadow: hover ? '0px 10px 20px rgba(0,0,0,0.1)' : 'none',
         backgroundColor: '#fff',
         borderRadius: '8px',
-        padding: '16px'
+        padding: '16px',
+        margin: '0 auto'
       }}
     >
       
       <Box sx={{ 
         height: '180px', 
-        width: '225px',
+        width: '100%',
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center',

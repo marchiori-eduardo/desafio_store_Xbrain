@@ -47,12 +47,12 @@ const ProductList = () => {
         </Container>
       </AppBar>
 
-      <Container maxWidth="lg" sx={{ marginTop: '40px' }}>
+      <Container maxWidth="lg" sx={{ marginTop: '40px', width: '100%', padding: { xs: '0 16px', sm: '0 20px', md: '0 24px' } }}>
         
         
-        <Grid container spacing={3}>
+        <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
           {products.map((product) => (
-            <Grid item key={product.id} xs={12} sm={6} md={3}>
+            <Grid item key={product.id} xs={12} sm={6} md={4} lg={3} sx={{ display: 'flex', justifyContent: 'center' }}>
               <ProductCard product={product} />
             </Grid>
           ))}
